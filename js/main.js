@@ -21,6 +21,7 @@ app.controller = app.controller("ctrl", function ($scope, $http) {
 		$http
 			.post("startInstallation", newObj).then(function () {
 				alert("Installation complete!");
+				document.location.href = '../frontend/';
 			}, function () {
 				alert("ERROR: Installation could not be completed. Wrong MySQL credentials?");
 			});
