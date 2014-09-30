@@ -23,6 +23,11 @@ Flight::route("POST /startInstallation", function () {
 		$dbSettings[] = $data["DBUser"];
 		//DBPassword
 		$dbSettings[] = $data["DBPassword"];
+		//DBHost
+		$dbSettings[] = $data["DBHost"];
+		//DBPort
+        $dbSettings[] = $data["DBPort"];
+
 
 		Flight::register( 'DB', 'dbWrapper', $dbSettings );
 		$DB = Flight::DB();
