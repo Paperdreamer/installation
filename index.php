@@ -1,7 +1,11 @@
 <?php
-
 require '../dbWrapper/dbWrapper.class.php';
 require 'vendor/mikecao/flight/flight/Flight.php';
+
+if (file_exists("../backend/config/database.php")) {
+	header('Location: ../frontend/');
+	exit;
+}
 
 //////////////////////////////////////////////////////
 // Routes
